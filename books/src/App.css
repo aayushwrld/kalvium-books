@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+* {
+  font-family: Rubik;
+}
+
+nav {
+  border-bottom: 3px solid #454545;
+  display: flex;
+  align-items: center;
+  padding: 3vh 5vh 3vh 3vh;
+  justify-content: space-between;
+  box-shadow: 0px 1px 10px #333333;
+}
+
+.logo {
+  display: flex;
+  /* width: 18vw; */
+  flex-wrap: wrap;
+}
+
+#kalvium-logo {
+  width: 11vmax;
+}
+
+#logo-2 {
+  position: relative;
+  font-size: 2vmax;
+  top: 0.2vmax;
+  left: 0.5vmax;
+  font-weight: 900;
+}
+
+.search-input {
+  padding-left: 5vh;
+  background-image: url(./assets/search-icon.svg);
+  background-repeat: no-repeat;
+  background-position: 5px center;
+  width: 23vmax;
+  height: 6vh;
+  border: 3px solid #454545;
+  font-size: 1.2vmax;
+}
+
+.register-btn button{
+  background-color: #7c6a96;
+  border: 3px solid #333333;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.2s;
+  height: 6vh;
+  box-shadow: 4px 4px 0px #333333;
+}
+
+.register-btn button:hover{
+  cursor: pointer;
+}
+
+#img-register {
+  width: 30px;
+  filter: invert(1);
+  margin-right: 10px;
+}
+
+#text-register {
+  color: white;
+  font-size: 1.3vmax;
+}
+
+.loading {
+  height: 80vh;
+  width: 100vw;
+}
+
+#loading-img {
+  height: 100px;
+  position: absolute;
+  top: 50%;
+}
+
+legend {
+  font-size: 1.5vmax;
+}
+
+fieldset {
+  width: 50vw;
+  text-align: center;
+  border: 3px solid #454545;
+
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 10vh;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+}
+
+form input[type="text"], form input[type="password"], form input[type="email"] {
+  width: 40%;
+  border: 3px solid #333333;
+  font-size: 1.3vmax;
+  padding: 8px;
+}
+
+form p {
+  margin-top: 5px;
+}
+
+.err {
+  color: red;
+  font-size: 1vmax;
+}
+
+#register-btn {
+  padding: 10px;
+  background-color: #7c6a96;
+  border: 3px solid #333333;
+  color: white;
+  &.disabled {
+    background-color: rgb(227, 210, 246); /* Light purple color */
+    cursor: not-allowed; /* Change cursor to not-allowed */
+  }
+  font-size: 1.2vmax;
+}
+
+.checkbox {
+  width: 45%;
+  display: flex;
+  justify-content: space-around;
+  font-size: 1vmax;
+  align-items: center;
+}
+
+.success {
+  font-size: 1.5vmax;
+  margin-bottom: 3vh;
+  font-weight: 900;
+}
+
+@media (max-width: 600px) {
+  nav {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    padding: 3vh;
+  }
+
+  .logo {
+    order: 1;
+    margin-bottom: 10px;
+    top: 10px;
+  }
+
+  .register-btn {
+    order: 1;
+    align-self: flex-start;
+  padding: 5px;
+  }
+
+  .register-btn button {
+  box-shadow: 0px 0px 0px #333333;
+  height: 5vh;
+
+  }
+
+  #img-register {
+    width: 18px;
+  }
+
+  .search-area {
+    margin-top: 1vh;
+    order: 2;
+    width: 80vw;
+  }
+
+  .search-input {
+  padding-left: 6vh;
+
+    width: 65vw;
+    font-size: 2vmax;
+  height: 5vh;
+  }
+
+  #text-register {
+    font-size:1.9vmax;
+  }
+
+  fieldset {
+    width: 70vw;
+  }
+
+  legend {
+    font-size: 1.8vmax;
+  }
+
+  .err {
+    color: red;
+    font-size: 1.4vmax;
+  }
+
+  .checkbox {
+    width: 80%;
+    font-size: 1.3vmax;
+    text-align: end;
+  }
+  
+  form input[type="text"], form input[type="password"], form input[type="email"] {
+    width: 75%;
+  font-size: 2vmax;
+    
+  }
+  
+  .success {
+    font-size: 1.5vmax;
+  }
+  
+}
