@@ -70,31 +70,65 @@ nav {
 }
 
 .loading {
-  height: 80vh;
-  width: 100vw;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  z-index: 10;
 }
 
 #loading-img {
   height: 100px;
+}
+
+.loading {
   position: absolute;
-  top: 50%;
+  top: 45%;
 }
 
 legend {
   font-size: 1.5vmax;
+  padding: 10px;
 }
 
 fieldset {
   width: 50vw;
   text-align: center;
   border: 3px solid #454545;
-
 }
 
 .form-container {
   display: flex;
   justify-content: center;
   margin-top: 10vh;
+}
+
+.register-success {
+  margin-top: 10vh;
+  border: 3px solid #333333;
+  display: flex;
+  flex-direction: column;
+  padding: 4vh;
+  box-shadow: 4px 4px 0px #333333;
+  text-align: center;
+  align-items: center;
+}
+
+.register-success button {
+  background-color: #7c6a96;
+  border: 3px solid #333333;
+  padding: 10px;
+  box-shadow: 4px 4px 0px #333333;
+  font-size: 1.3vmax;
+  color: white;
+  margin: 1vh;
+}
+
+.register-success button {
+  cursor: pointer;
+}
+
+.register-success h1 {
+  margin-bottom: 2vh;
 }
 
 form {
@@ -131,6 +165,8 @@ form p {
     cursor: not-allowed; /* Change cursor to not-allowed */
   }
   font-size: 1.2vmax;
+  cursor: pointer;
+
 }
 
 .checkbox {
@@ -147,7 +183,110 @@ form p {
   font-weight: 900;
 }
 
-@media (max-width: 600px) {
+.parent-home {
+  padding: 5vmin;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  pointer-events: auto;
+}
+
+.parent-blur {
+  padding: 5vmin;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  filter: blur(15px);
+  pointer-events: none;
+}
+
+.check-register {
+  position: fixed;
+  width: 100vw;
+  top: 50%;
+  text-align: center;
+  font-size: 2.5vw;
+  z-index: 1;
+  color: red;
+  -webkit-text-stroke: 0.1px black;
+  text-shadow: 0px 0px 10px #a09999;
+  font-weight: 900;
+}
+
+#heading {
+  font-size: 2.8vmax;
+  font-weight: 900;
+}
+
+#booksMain {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5vmin;
+  margin-top: 5vh;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2vmin;
+  padding: 1vmin;
+  justify-content: space-around;
+  border: 3px solid #333333;
+  width: 15vw;
+  transition: all 0.3s;
+  border-radius: 10px;
+}
+
+.item:hover {
+  background-color: #33333321;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+#item-free {
+  color: rgb(1, 82, 1);
+}
+
+#item-image {
+  width: 150px;
+  height: 220px;
+  transition: all 0.3s;
+}
+
+#item-image:hover {
+  transform: scale(1.02);
+}
+
+.item-title {
+  text-align: center;
+  width: 80%;
+
+}
+
+.item-author {
+  text-align: center;
+  font-size: 0.8vmax;
+}
+
+.item-rating {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+}
+
+.item-star {
+  width: 15px;
+  margin-right: 5px;
+}
+
+@media (max-width: 700px) {
   nav {
     display: flex;
     align-items: flex-start;
@@ -226,4 +365,38 @@ form p {
     font-size: 1.5vmax;
   }
   
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5vmin;
+  }
+
+  #item-image {
+    width: 110px;
+    height: 180px;
+  }
+
+  .item-author {
+    text-align: center;
+    font-size: 1.3vmax;
+  }
+  
+  .item {
+    width: 40vw;
+  }
+
+  .register-success {
+    width: 70%;
+  }
+
+  .register-success button {
+    font-size: 2vmax;
+    margin: 2vw;
+  }
+}
+
+@media (max-width: 1000px) and (min-width:700px){
+  .item {
+    width: 25vw;
+  }
 }

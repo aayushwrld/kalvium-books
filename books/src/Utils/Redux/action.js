@@ -1,17 +1,26 @@
-import { FETCH, SEARCH } from "./actionType";
+// ^ importing required, action types
+import { DATA, FETCH, SEARCH } from "./actionType";
 
+// * adding action for storing data fetched
 export const storeFetchData = (data) => {
-    // console.log(data)
     return {
         type: FETCH,
         payload: data
     }
 }
 
+// * adding action for search bar
 export const storeSearchData = (data) => {
-    console.log(data)
     return {
         type: SEARCH,
+        payload: data
+    }
+}
+
+// * adding action for form data
+export const storeFormData = (data) => {
+    return {
+        type: DATA,
         payload: data
     }
 }

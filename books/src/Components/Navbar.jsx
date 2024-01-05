@@ -1,8 +1,11 @@
 import React from 'react'
 import '../App.css'
 import { Link } from 'react-router-dom'
+import { useDispatch } from 'react-redux'
+import { storeSearchData } from '../Utils/Redux/action'
 
 const Navbar = () => {
+    const dispatch = useDispatch()
   return (
     <>
     <nav>
@@ -13,7 +16,7 @@ const Navbar = () => {
         </div>
         </Link>
         <div className="search-area">
-            <input type="text" placeholder='Search for Books' className='search-input' />
+            <input type="text" placeholder='Search for Books' className='search-input' onChange={(e)=> {dispatch(storeSearchData(e.target.value))}}/>
         </div>
         <div className='register-btn'>
             <Link to={'/register'} style={{textDecoration:"None"}}>
@@ -29,4 +32,3 @@ const Navbar = () => {
 }
 
 export default Navbar
-
